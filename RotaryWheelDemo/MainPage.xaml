@@ -13,6 +13,7 @@
             Size="200"
             BackgroundColor="Purple" 
             ForegroundColor="White" />
+        <Button Content="Spin Wheel" Click="SpinWheelButton_Click"/>
         <TextBlock Text="{Binding SelectedItemValue, ElementName=rotaryWheelDemo}"  />
     </StackPanel>
 </Page>
