@@ -101,6 +101,17 @@ namespace RotaryWheelUserControl
             int steps = r.Next(_pieSlices.Count, _pieSlices.Count * maxSpins);
             SpinTo(steps, durationInSec);
         }
+        public void SelectFirstItem()
+        {
+            if (_pieSlices.Any())
+            {
+                SelectedItem = _pieSlices.FirstOrDefault(); 
+                if (SelectedItem != null)
+                {
+                    Angle = 360 - SelectedItem.Angle / 2;  
+                }
+            }
+        }
         private void SpinTo(int itemIndex, int durationInSec = -1)
         {
             Random r = new Random();
